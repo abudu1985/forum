@@ -6,7 +6,9 @@
             <div class="col-md-8">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <a href="#">{{ $tread->creator->name }}</a> posted:
+{{--                        <a href="{{url('/profiles/') . '/'}}{{ $tread->creator->name }}">--}}
+                            <a href="{{ route('profile', $tread->creator) }}">
+                            {{ $tread->creator->name }}</a> posted:
                         {{ $tread->title }}</div>
 
                     <div class="panel-body">
