@@ -55,7 +55,7 @@
                     <div class="panel-body">
                         <p>
                             This thread was published {{ $tread->created_at->diffForHumans()}}
-                            by <a href="#">{{ $tread->creator->name }}</a>, and currently has <b>{{ $tread->replies_count }}</b> {{ str_plural('comment', $tread->replies_count) }}.
+                            by <a href="{{ route('profile', $tread->creator) }}">{{ $tread->creator->name }}</a>, and currently has <b>{{ $tread->replies_count }}</b> {{ str_plural('comment', $tread->replies_count) }}.
                         </p>
                     </div>
                 </div>

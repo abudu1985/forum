@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
+use App\Activity;
 
 
 class CreateTreadsTest extends TestCase
@@ -97,6 +98,8 @@ class CreateTreadsTest extends TestCase
         $response->assertStatus(204);
         $this->assertDatabaseMissing('treads', ['id' => $tread->id]);
         $this->assertDatabaseMissing('replies', ['id' => $reply->id]);
+
+        $this->assertEquals(0, Activity::count());
     }
 
     public function publishTread($overrides = [])

@@ -24,7 +24,7 @@ class Tread extends Model
         });
 
         static::deleting(function ($tread){
-           $tread->replies()->delete();
+           $tread->replies->each->delete();
         });
     }
 
