@@ -18,9 +18,10 @@ class ProfilesTest extends TestCase
 
     public function test_profiles_display_all_threads_created_by_that_user()
     {
-        $user = create('App\User');
-        $tread = create('App\Tread', ['user_id' => $user->id]);
-        $this->get("/profiles/{$user->name}")
+        $this->signIn();
+
+        $tread = create('App\Tread', ['user_id' => auth()->id()]);
+        $this->get("/profiles/" . auth()->user()->name)
             ->assertSee($tread->title)
             ->assertSee($tread->body);
     }

@@ -5,29 +5,19 @@
         <div class="row">
             <div class="coi-md-8 col-md-offset-2">
                 <div class="page-header">
-                    <h1>
+                    <h2>
                         {{ $profileUser->name }}
-                        <small>Since {{ $profileUser->created_at->diffForHumans() }}</small>
-                    </h1>
+                    </h2>
                 </div>
 
-                @foreach($treads as $tread)
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <div class="level">
-                        <span class="flex">
-                              <a href="{{ route('profile', $tread->creator)}}">{{ $tread->creator->name }}</a> posted:
-                              <a href="{{ $tread->path() }}">{{ $tread->title }}</a>
-                        </span>
-                                <span>{{ $profileUser->created_at->diffForHumans() }}</span>
-                            </div>
-                        </div>
-                        <div class="panel-body">
-                            {{ $tread->body }}
-                        </div>
-                    </div>
+                @foreach($activities as $date => $activity)
+                    <h4 class="page-header">{{ $date }}</h4>
+
+                    @foreach($activity as $record)
+                        @include("profiles.activities.{$record->type}", ['activity'=> $record])
+                    @endforeach
                 @endforeach
-                {{ $treads->links() }}
+{{--                {{ $treads->links() }}--}}
             </div>
         </div>
     </div>

@@ -3,6 +3,7 @@
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 use App\Activity;
+use Carbon\Carbon;
 
 class ActivityTest extends TestCase
 {
@@ -29,5 +30,32 @@ class ActivityTest extends TestCase
         $this->signIn();
         $reply = create('App\Reply');
         $this->assertEquals(2, Activity::count());
+    }
+
+    public function test_it_fetches_a_feed_for_any_user()
+    {
+        // have a thread
+        $this->signIn();
+        create('App\Tread', ['user_id' => auth()->id()], 2);
+
+//        // and another thread from a week ago
+//           create('App\Tread', [
+//              'user_id' => auth()->id(),
+//               'created_at' => Carbon::now()->subWeek()
+//           ]);
+
+           auth()->user()->activity()->first()->update(['created_at' => Carbon::now()->subWeek()]);
+
+           // when we fetch their feed
+           $feed = Activity::feed(auth()->user());
+
+           // Then, it should be returned in the proper format
+            $this->assertTrue($feed->keys()->contains(
+                Carbon::now()->format('Y-m-d')
+            ));
+
+            $this->assertTrue($feed->keys()->contains(
+                Carbon::now()->subWeek()->format('Y-m-d')
+            ));
     }
 }
