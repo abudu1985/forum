@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                @foreach($treads as $tread)
+                @forelse($treads as $tread)
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="level">
@@ -23,7 +23,9 @@
 
                 </div>
             </div>
-                @endforeach
+                @empty
+                    <p>There are no relevant result at this time.</p>
+                @endforelse
         </div>
     </div>
     </div>

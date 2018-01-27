@@ -114,7 +114,10 @@ class TreadsController extends Controller
      */
     public function destroy($channel, Tread $tread)
     {
-      //  $tread->replies()->delete();
+        $this->authorize('update', $tread);
+//        if($tread->user_id != auth()->id()){
+//            abort(403, 'You do not have permission to do this action.');
+//        }
         $tread->delete();
         if(request()->wantsJson()){
             return response([], 204);

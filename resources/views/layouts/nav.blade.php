@@ -33,7 +33,7 @@
 
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Channels <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         @foreach($channels as $channel)
                             <li><a href="{{url('/treads/') . '/' . $channel->slug }}">{{ $channel->name }}</a></li>

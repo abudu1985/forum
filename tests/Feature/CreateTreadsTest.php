@@ -78,18 +78,20 @@ class CreateTreadsTest extends TestCase
             ->assertSessionHasErrors('channel_id');
     }
 
-    public function test_guests_cant_delete_treads()
+    public function test_unauthorized_user_maynot_delete_treads()
     {
         $this->withExceptionHandling();
         $tread = create('App\Tread');
-        $response = $this->delete($tread->path());
-        $response->assertRedirect('/login');
+        $this->delete($tread->path())->assertRedirect('/login');
+
+        $this->signIn();
+        $this->delete($tread->path())->assertStatus(403);
     }
 
-    public function test_a_tread_can_be_deleted()
+    public function test_authorized_user_can_deleted_a_treads()
     {
         $this->signIn();
-        $tread = create('App\Tread');
+        $tread = create('App\Tread', ['user_id' => auth()->id()]);
         $reply = create('App\Reply', ['tread_id' => $tread->id]);
         $response = $this->json('DELETE', $tread->path());
         $response->assertStatus(204);

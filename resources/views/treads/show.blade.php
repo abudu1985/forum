@@ -13,11 +13,15 @@
                                 {{ $tread->creator->name }}</a> posted:
                                 {{ $tread->title }}
                             </span>
-                            <form action="{{ $tread->path()}}" method="POST">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-                                <button type="submit" class="btn btn-link">Delete Thread</button>
-                            </form>
+
+                            @can ('update', $tread)
+                                <form action="{{ $tread->path()}}" method="POST">
+                                    {{ csrf_field() }}
+                                    {{ method_field('DELETE') }}
+                                    <button type="submit" class="btn btn-link">Delete Thread</button>
+                                </form>
+                            @endcan
+
                         </div>
 
                     </div>

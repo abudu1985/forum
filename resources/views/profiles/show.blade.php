@@ -16,8 +16,9 @@
                         <div class="panel-heading">
                             <div class="level">
                         <span class="flex">
-                    <a href="#">{{ $tread->creator->name }}</a> posted:{{ $tread->title }}
-                    </span>
+                              <a href="{{ route('profile', $tread->creator)}}">{{ $tread->creator->name }}</a> posted:
+                              <a href="{{ $tread->path() }}">{{ $tread->title }}</a>
+                        </span>
                                 <span>{{ $profileUser->created_at->diffForHumans() }}</span>
                             </div>
                         </div>
