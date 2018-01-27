@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tread extends Model
 {
+    use RecordsActivity;
+
     protected $fillable = [
         'user_id', 'title', 'body', 'channel_id'
     ];
