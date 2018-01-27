@@ -78,6 +78,25 @@ class CreateTreadsTest extends TestCase
             ->assertSessionHasErrors('channel_id');
     }
 
+    public function test_guests_cant_delete_treads()
+    {
+        $this->withExceptionHandling();
+        $tread = create('App\Tread');
+        $response = $this->delete($tread->path());
+        $response->assertRedirect('/login');
+    }
+
+    public function test_a_tread_can_be_deleted()
+    {
+        $this->signIn();
+        $tread = create('App\Tread');
+        $reply = create('App\Reply', ['tread_id' => $tread->id]);
+        $response = $this->json('DELETE', $tread->path());
+        $response->assertStatus(204);
+        $this->assertDatabaseMissing('treads', ['id' => $tread->id]);
+        $this->assertDatabaseMissing('replies', ['id' => $reply->id]);
+    }
+
     public function publishTread($overrides = [])
     {
         $this->withExceptionHandling()->signIn();
@@ -85,4 +104,7 @@ class CreateTreadsTest extends TestCase
 
        return $this->post('/treads', $tread->toArray());
     }
+
+
+
 }

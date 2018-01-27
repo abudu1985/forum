@@ -73,11 +73,11 @@ class TreadsController extends Controller
     }
 
     /**
-     * @param $channelId
+     * @param $channel
      * @param Tread $tread
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function show($channelId, Tread $tread)
+    public function show($channel, Tread $tread)
     {
         return view('treads.show', [
             'tread' => $tread,
@@ -109,14 +109,17 @@ class TreadsController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Tread  $tread
-     * @return \Illuminate\Http\Response
+     * @param $channel
+     * @param Tread $tread
      */
-    public function destroy(Tread $tread)
+    public function destroy($channel, Tread $tread)
     {
-        //
+      //  $tread->replies()->delete();
+        $tread->delete();
+        if(request()->wantsJson()){
+            return response([], 204);
+        }
+        return redirect('/treads');
     }
 
 }

@@ -21,6 +21,7 @@ Auth::routes();
 Route::get('/treads', 'TreadsController@index');
 Route::get('/treads/create', 'TreadsController@create');
 Route::get('/treads/{channel}/{tread}', 'TreadsController@show');
+Route::delete('/treads/{channel}/{tread}', 'TreadsController@destroy');
 
   // instead of all above
 // Route::resource('treads', 'TreadsController');

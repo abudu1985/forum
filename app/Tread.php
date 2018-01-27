@@ -20,6 +20,10 @@ class Tread extends Model
         static::addGlobalScope('replyCount', function($builder){
             $builder->withCount('replies');
         });
+
+        static::deleting(function ($tread){
+           $tread->replies()->delete();
+        });
     }
 
     public function path()
