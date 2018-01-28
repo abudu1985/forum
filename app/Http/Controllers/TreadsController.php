@@ -55,7 +55,6 @@ class TreadsController extends Controller
      */
     public function store(Request $request)
     {
-       // dd($request->all());
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required',
@@ -69,7 +68,8 @@ class TreadsController extends Controller
             'body' => request('body')
         ]);
         //dd($tread);
-        return redirect($tread->path());
+        return redirect($tread->path())
+            ->with('flash', 'Your thread has been published!');
     }
 
     /**
@@ -115,9 +115,7 @@ class TreadsController extends Controller
     public function destroy($channel, Tread $tread)
     {
         $this->authorize('update', $tread);
-//        if($tread->user_id != auth()->id()){
-//            abort(403, 'You do not have permission to do this action.');
-//        }
+
         $tread->delete();
         if(request()->wantsJson()){
             return response([], 204);
