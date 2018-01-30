@@ -10,6 +10,7 @@ class Reply extends Model
 
     protected $guarded = [];
     protected $with = ['owner', 'favorites'];
+    protected $appends = ['favoritesCount', 'isFavorited'];
 
     protected $fillable = [
         'tread_id', 'user_id', 'body'
