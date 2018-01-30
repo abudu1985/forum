@@ -11,6 +11,12 @@ namespace App;
 
 trait Favoritable
 {
+    protected static function bootFavoritable()
+    {
+        static::deleting(function($model){
+            $model->favorites->each->delete();
+        });
+    }
 
     public function favorites()
     {
@@ -28,7 +34,12 @@ trait Favoritable
     public function unfavorite()
     {
         $attributes = ['user_id' => auth()->id()];
-        $this->favorites()->where($attributes)->delete();
+        //$this->favorites()->where($attributes)->get()->each(function($favorite){$favorite->delete();
+        //    });
+
+        // the same as above with laravel syntax shugar
+        $this->favorites()->where($attributes)->get()->each->delete();
+
     }
 
     public function isFavorited()

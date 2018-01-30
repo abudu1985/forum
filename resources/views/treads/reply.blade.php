@@ -11,15 +11,12 @@
             said {{ $reply->created_at->diffForHumans() }}
 
             </h5>
-            <div>
-                 <favorite :reply="{{ $reply }}"></favorite>
-            {{--<form method="post" action="{{url('/replies/')}}{{ '/' . $reply->id . '/favorites'}}">--}}
-                {{--{{ csrf_field() }}--}}
-                {{--<button type="submit" class="btn btn-default" {{ $reply->active() ? 'disabled' : '' }}>--}}
-                {{--{{ $reply->favorites_count }} {{ str_plural('Favorite', $reply->favorites_count) }}--}}
-                {{--</button>--}}
-            {{--</form>--}}
-            </div>
+            @if(Auth::check())
+                <div>
+                     <favorite :reply="{{ $reply }}"></favorite>
+
+                </div>
+            @endif
         </div>
     </div>
     <div class="panel-body">
