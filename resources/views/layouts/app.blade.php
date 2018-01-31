@@ -12,6 +12,15 @@
 
     <!-- Styles -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <script>
+
+        window.App = {!! json_encode([
+        'csrfToken' => csrf_token(),
+        'user' => Auth::user(),
+        'signedIn' => Auth::check()
+        ]) !!};
+
+    </script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <style>
         body {padding-bottom: 100px;}
