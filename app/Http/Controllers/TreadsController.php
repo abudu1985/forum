@@ -79,10 +79,7 @@ class TreadsController extends Controller
      */
     public function show($channel, Tread $tread)
     {
-        return view('treads.show', [
-            'tread' => $tread,
-            'replies' => $tread->replies()->paginate(20)
-        ]);
+        return view('treads.show', compact('tread'));
     }
 
     /**
