@@ -80,7 +80,16 @@ class ReadTreadsTest extends TestCase
 
 
         $response = $this->getJson('treads?popular=1')->json();
-        $this->assertEquals([0, 2, 3], array_column($response, 'replies_count'));
+        $this->assertEquals([3, 2, 0], array_column($response, 'replies_count'));
+    }
+
+    public function test_a_user_can_filter_treads__by_those_that_are_unanswered()
+    {
+        $tread= create('App\Tread');
+        create('App\Reply', ['tread_id' => $tread->id]);
+        $response = $this->getJson('treads?unanswered=1')->json();
+        $this->assertCount(1, $response);
+
     }
 
     public function test_user_can_request_all_replies_for_a_given_thread()

@@ -6,7 +6,7 @@ use App\User;
 use Illuminate\Http\Request;
 class TreadFilters extends Filters
 {
-    protected $filters = ['by', 'popular'];
+    protected $filters = ['by', 'popular', 'unanswered'];
 
     protected function by($username)
     {
@@ -19,5 +19,10 @@ class TreadFilters extends Filters
     {
         $this->builder->getQuery()->orders = [];
         return $this->builder->orderBy('replies_count', 'desc');
+    }
+
+    protected function unanswered($username)
+    {
+        return $this->builder->where('replies_count', 0);
     }
 }

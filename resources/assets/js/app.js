@@ -22,3 +22,4 @@ Vue.component('tread-view', require('./pages/Tread.vue'));
 const app = new Vue({
     el: '#app'
 });
+

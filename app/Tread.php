@@ -19,10 +19,6 @@ class Tread extends Model
     {
         parent::boot();
 
-        static::addGlobalScope('replyCount', function($builder){
-            $builder->withCount('replies');
-        });
-
         static::deleting(function ($tread){
            $tread->replies->each->delete();
         });

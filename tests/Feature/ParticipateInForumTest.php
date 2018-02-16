@@ -40,6 +40,7 @@ class ParticipateInForum extends TestCase
 //        $this->get($tread->path())
 //            ->assertSee($reply->body);
         $this->assertDatabaseHas('replies', ['body' => $reply->body]);
+        $this->assertEquals(1, $tread->fresh()->replies_count);
 
     }
 
@@ -75,6 +76,8 @@ class ParticipateInForum extends TestCase
         $this->delete("/replies/{$reply->id}")->assertStatus(200);
 
         $this->assertDatabaseMissing('replies', ['id' => $reply->id]);
+
+        $this->assertEquals(0, $reply->tread->fresh()->replies_count);
     }
 
     function test_unauthorized_user_cannot_update_replies()
