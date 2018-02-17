@@ -52,4 +52,45 @@ class ExampleTest extends TestCase
         //$this->assertEquals(url('/treads/') . '/' . $tread->channel->slug . '/' . $tread->id, $tread->path());
         $this->assertEquals( url('/treads/') . '/' . "{$tread->channel->slug}/{$tread->id}", $tread->path());
     }
+
+    public function test_a_tread_can_be_subscribed_to()
+    {
+        $tread = create('App\Tread');
+
+        //When user subscribe to the thread
+        $tread->subscribe($userId = 1);
+
+        // We should be able to fetch all treads that the user has subscribed to
+        $this->assertEquals(
+            1,
+        $tread->subscriptions()->where('user_id', $userId)->count()
+        );
+    }
+
+    public function test_a_tread_can_be_unsubscribed_to()
+    {
+        $tread = create('App\Tread');
+
+        //When user subscribe to the thread
+        $tread->subscribe($userId = 1);
+
+        $tread->unsubscribe($userId);
+
+        // We should be able to fetch all treads that the user has subscribed to
+        $this->assertCount(0, $tread->subscriptions);
+    }
+
+    public function test_it_knows_that_tread_is_subscribed_to()
+    {
+        $tread = create('App\Tread');
+
+        $this->assertFalse($tread->isSubscribedTo);
+
+        $this->signIn();
+
+        //When user subscribe to the thread
+        $tread->subscribe();
+
+        $this->assertTrue($tread->isSubscribedTo);
+    }
 }

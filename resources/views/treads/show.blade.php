@@ -45,6 +45,9 @@
                             by <a href="{{ route('profile', $tread->creator) }}">{{ $tread->creator->name }}</a>,
                             and currently has <b><span v-text="repliesCount"></span></b> {{ str_plural('comment', $tread->replies_count) }}.
                         </p>
+                        <p>
+                            <subscribe-button :active="{{ json_encode($tread->isSubscribedTo)}}"></subscribe-button>
+                        </p>
                     </div>
                 </div>
             </div>
