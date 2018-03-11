@@ -9,6 +9,7 @@
 <script>
     export default {
         props: ['reply'],
+        
         data() {
             return {
                 count: this.reply.favoritesCount,
