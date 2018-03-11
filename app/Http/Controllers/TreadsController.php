@@ -6,6 +6,7 @@ use App\Filters\TreadFilters;
 use App\Channel;
 use App\Tread;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class TreadsController extends Controller
 {
@@ -79,6 +80,17 @@ class TreadsController extends Controller
      */
     public function show($channel, Tread $tread)
     {
+        // Record that the user visited that page
+        // Record a timestamp
+        if (auth()->check()){
+            auth()->user()->read($tread);
+        }
+
+
+//        $key = sprintf("users.%s.visits.%s", auth()->id(), $tread->id);
+//
+//        cache()->forever($key, Carbon::now());
+
         return view('treads.show', compact('tread'));
     }
 

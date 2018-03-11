@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 188);
+/******/ 	return __webpack_require__(__webpack_require__.s = 191);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1914,7 +1914,7 @@ function loadLocale(name) {
         try {
             oldLocale = globalLocale._abbr;
             var aliasedRequire = require;
-            __webpack_require__(167)("./" + name);
+            __webpack_require__(168)("./" + name);
             getSetGlobalLocale(oldLocale);
         } catch (e) {}
     }
@@ -28032,7 +28032,7 @@ Vue$3.compile = compileToFunctions;
 
 module.exports = Vue$3;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(4), __webpack_require__(169).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(4), __webpack_require__(170).setImmediate))
 
 /***/ }),
 /* 131 */
@@ -28073,7 +28073,7 @@ module.exports = function(module) {
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-__webpack_require__(160);
+__webpack_require__(161);
 
 window.Vue = __webpack_require__(130);
 
@@ -28083,11 +28083,11 @@ window.Vue = __webpack_require__(130);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('flash', __webpack_require__(171));
-Vue.component('paginator', __webpack_require__(173));
-Vue.component('user-notifications', __webpack_require__(196));
+Vue.component('flash', __webpack_require__(172));
+Vue.component('paginator', __webpack_require__(174));
+Vue.component('user-notifications', __webpack_require__(178));
 
-Vue.component('tread-view', __webpack_require__(177));
+Vue.component('tread-view', __webpack_require__(179));
 
 var app = new Vue({
   el: '#app'
@@ -28097,7 +28097,7 @@ var app = new Vue({
 /* 133 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: Missing binding /opt/lampp/htdocs/forum/node_modules/node-sass/vendor/linux-x64-51/binding.node\nNode Sass could not find a binding for your current environment: Linux 64-bit with Node.js 7.x\n\nFound bindings for the following environments:\n  - Windows 64-bit with Node.js 6.x\n\nThis usually happens because your environment has changed since running `npm install`.\nRun `npm rebuild node-sass --force` to build the binding for your current environment.\n    at module.exports (/opt/lampp/htdocs/forum/node_modules/node-sass/lib/binding.js:15:13)\n    at Object.<anonymous> (/opt/lampp/htdocs/forum/node_modules/node-sass/lib/index.js:14:35)\n    at Module._compile (module.js:571:32)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at Object.<anonymous> (/opt/lampp/htdocs/forum/node_modules/sass-loader/lib/loader.js:3:14)\n    at Module._compile (module.js:571:32)\n    at Object.Module._extensions..js (module.js:580:10)\n    at Module.load (module.js:488:32)\n    at tryModuleLoad (module.js:447:12)\n    at Function.Module._load (module.js:439:3)\n    at Module.require (module.js:498:17)\n    at require (internal/module.js:20:19)\n    at loadLoader (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/loadLoader.js:13:17)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at runLoaders (/opt/lampp/htdocs/forum/node_modules/webpack/lib/NormalModule.js:192:19)\n    at /opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:170:18\n    at loadLoader (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/loadLoader.js:27:11)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:165:10)\n    at /opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:173:18\n    at loadLoader (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/loadLoader.js:36:3)\n    at iteratePitchingLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:169:2)\n    at runLoaders (/opt/lampp/htdocs/forum/node_modules/loader-runner/lib/LoaderRunner.js:362:2)\n    at NormalModule.doBuild (/opt/lampp/htdocs/forum/node_modules/webpack/lib/NormalModule.js:179:3)\n    at NormalModule.build (/opt/lampp/htdocs/forum/node_modules/webpack/lib/NormalModule.js:268:15)\n    at Compilation.buildModule (/opt/lampp/htdocs/forum/node_modules/webpack/lib/Compilation.js:142:10)\n    at moduleFactory.create (/opt/lampp/htdocs/forum/node_modules/webpack/lib/Compilation.js:429:9)\n    at /opt/lampp/htdocs/forum/node_modules/webpack/lib/NormalModuleFactory.js:251:4\n    at /opt/lampp/htdocs/forum/node_modules/webpack/lib/NormalModuleFactory.js:93:13\n    at /opt/lampp/htdocs/forum/node_modules/tapable/lib/Tapable.js:268:11\n    at NormalModuleFactory.params.normalModuleFactory.plugin (/opt/lampp/htdocs/forum/node_modules/webpack/lib/CompatibilityPlugin.js:52:5)\n    at NormalModuleFactory.applyPluginsAsyncWaterfall (/opt/lampp/htdocs/forum/node_modules/tapable/lib/Tapable.js:272:13)\n    at onDoneResolving (/opt/lampp/htdocs/forum/node_modules/webpack/lib/NormalModuleFactory.js:68:11)\n    at onDoneResolving (/opt/lampp/htdocs/forum/node_modules/webpack/lib/NormalModuleFactory.js:197:6)\n    at _combinedTickCallback (internal/process/next_tick.js:73:7)\n    at process._tickCallback (internal/process/next_tick.js:104:9)");
 
 /***/ }),
 /* 134 */
@@ -28957,6 +28957,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: ['reply'],
+
     data: function data() {
         return {
             count: this.reply.favoritesCount,
@@ -29178,11 +29179,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Reply_vue__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Reply_vue__ = __webpack_require__(176);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Reply_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Reply_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NewReply_vue__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NewReply_vue__ = __webpack_require__(173);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__NewReply_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__NewReply_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mixins_collection__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mixins_collection__ = __webpack_require__(162);
 //
 //
 //
@@ -29243,7 +29244,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Favorite_vue__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Favorite_vue__ = __webpack_require__(171);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Favorite_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Favorite_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_moment__);
@@ -29384,9 +29385,60 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Replies_vue__ = __webpack_require__(174);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return { notifications: false };
+    },
+    created: function created() {
+        var _this = this;
+
+        axios.get('/forum/profiles/' + window.App.user.name + '/notifications').then(function (response) {
+            return _this.notifications = response.data;
+        });
+    },
+
+    methods: {
+        markAsRead: function markAsRead(notification) {
+            axios.delete('/forum/profiles/' + window.App.user.name + '/notifications/' + notification.id);
+        }
+        //            subscribe() {
+        //                axios[
+        //                    (this.active ? 'delete' : 'post')
+        //                    ](location.pathname + '/subscriptions');
+        //                this.active = ! this.active;
+        //            }
+
+    }
+});
+
+/***/ }),
+/* 160 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Replies_vue__ = __webpack_require__(175);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Replies_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_Replies_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_SubscribeButton_vue__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_SubscribeButton_vue__ = __webpack_require__(177);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_SubscribeButton_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__components_SubscribeButton_vue__);
 
 
@@ -29406,12 +29458,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 //import Vue from 'vue';
 
-window._ = __webpack_require__(166);
+window._ = __webpack_require__(167);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -29420,9 +29472,9 @@ window._ = __webpack_require__(166);
  */
 
 try {
-    window.$ = window.jQuery = __webpack_require__(165);
+    window.$ = window.jQuery = __webpack_require__(166);
 
-    __webpack_require__(162);
+    __webpack_require__(163);
 } catch (e) {}
 
 /**
@@ -29484,7 +29536,7 @@ window.flash = function (message) {
 };
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29513,7 +29565,7 @@ window.flash = function (message) {
 });
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports) {
 
 /*!
@@ -31896,14 +31948,14 @@ if (typeof jQuery === 'undefined') {
 
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(164)();
+exports = module.exports = __webpack_require__(165)();
 exports.push([module.i, "\n.alert-flash{\n    position: fixed;\n    right: 25px;\n    bottom: 25px;\n}\n", ""]);
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports) {
 
 /*
@@ -31959,7 +32011,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -42330,7 +42382,7 @@ return jQuery;
 
 
 /***/ }),
-/* 166 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, module) {var __WEBPACK_AMD_DEFINE_RESULT__;/**
@@ -59422,7 +59474,7 @@ return jQuery;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(131)(module)))
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
@@ -59679,10 +59731,10 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 167;
+webpackContext.id = 168;
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -59875,7 +59927,7 @@ webpackContext.id = 167;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(3)))
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var apply = Function.prototype.apply;
@@ -59928,7 +59980,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(168);
+__webpack_require__(169);
 // On some exotic environments, it's not clear which object `setimmeidate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -59942,20 +59994,20 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   __webpack_require__(152),
   /* template */
-  __webpack_require__(178),
+  __webpack_require__(181),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\xampp\\htdocs\\forum\\resources\\assets\\js\\components\\Favorite.vue"
+Component.options.__file = "/opt/lampp/htdocs/forum/resources/assets/js/components/Favorite.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Favorite.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -59976,24 +60028,24 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(185)
+__webpack_require__(188)
 
 var Component = __webpack_require__(2)(
   /* script */
   __webpack_require__(153),
   /* template */
-  __webpack_require__(179),
+  __webpack_require__(182),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\xampp\\htdocs\\forum\\resources\\assets\\js\\components\\Flash.vue"
+Component.options.__file = "/opt/lampp/htdocs/forum/resources/assets/js/components/Flash.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Flash.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -60014,20 +60066,20 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   __webpack_require__(154),
   /* template */
-  __webpack_require__(183),
+  __webpack_require__(186),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\xampp\\htdocs\\forum\\resources\\assets\\js\\components\\NewReply.vue"
+Component.options.__file = "/opt/lampp/htdocs/forum/resources/assets/js/components/NewReply.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] NewReply.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -60048,20 +60100,20 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   __webpack_require__(155),
   /* template */
-  __webpack_require__(180),
+  __webpack_require__(183),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\xampp\\htdocs\\forum\\resources\\assets\\js\\components\\Paginator.vue"
+Component.options.__file = "/opt/lampp/htdocs/forum/resources/assets/js/components/Paginator.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Paginator.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -60082,20 +60134,20 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   __webpack_require__(156),
   /* template */
-  __webpack_require__(184),
+  __webpack_require__(187),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\xampp\\htdocs\\forum\\resources\\assets\\js\\components\\Replies.vue"
+Component.options.__file = "/opt/lampp/htdocs/forum/resources/assets/js/components/Replies.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Replies.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -60116,20 +60168,20 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   __webpack_require__(157),
   /* template */
-  __webpack_require__(182),
+  __webpack_require__(185),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\xampp\\htdocs\\forum\\resources\\assets\\js\\components\\Reply.vue"
+Component.options.__file = "/opt/lampp/htdocs/forum/resources/assets/js/components/Reply.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] Reply.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -60150,20 +60202,20 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   __webpack_require__(158),
   /* template */
-  __webpack_require__(181),
+  __webpack_require__(184),
   /* scopeId */
   null,
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\xampp\\htdocs\\forum\\resources\\assets\\js\\components\\SubscribeButton.vue"
+Component.options.__file = "/opt/lampp/htdocs/forum/resources/assets/js/components/SubscribeButton.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] SubscribeButton.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -60184,12 +60236,46 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Component = __webpack_require__(2)(
   /* script */
   __webpack_require__(159),
+  /* template */
+  __webpack_require__(180),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/opt/lampp/htdocs/forum/resources/assets/js/components/UserNotifications.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] UserNotifications.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-26743ee4", Component.options)
+  } else {
+    hotAPI.reload("data-v-26743ee4", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 179 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Component = __webpack_require__(2)(
+  /* script */
+  __webpack_require__(160),
   /* template */
   null,
   /* scopeId */
@@ -60197,7 +60283,7 @@ var Component = __webpack_require__(2)(
   /* cssModules */
   null
 )
-Component.options.__file = "C:\\xampp\\htdocs\\forum\\resources\\assets\\js\\pages\\Tread.vue"
+Component.options.__file = "/opt/lampp/htdocs/forum/resources/assets/js/pages/Tread.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -60217,7 +60303,50 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 178 */
+/* 180 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return (_vm.notifications.length) ? _c('li', {
+    staticClass: "dropdown"
+  }, [_vm._m(0), _vm._v(" "), _c('ul', {
+    staticClass: "dropdown-menu"
+  }, _vm._l((_vm.notifications), function(notification) {
+    return _c('li', [_c('a', {
+      attrs: {
+        "href": notification.data.link
+      },
+      domProps: {
+        "textContent": _vm._s(notification.data.message)
+      },
+      on: {
+        "click": function($event) {
+          _vm.markAsRead(notification)
+        }
+      }
+    })])
+  }))]) : _vm._e()
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('a', {
+    staticClass: "dropdown-toggle",
+    attrs: {
+      "href": "#",
+      "data-toggle": "dropdown"
+    }
+  }, [_c('span', {
+    staticClass: "glyphicon glyphicon-bell"
+  })])
+}]}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-26743ee4", module.exports)
+  }
+}
+
+/***/ }),
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -60246,7 +60375,7 @@ if (false) {
 }
 
 /***/ }),
-/* 179 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -60272,7 +60401,7 @@ if (false) {
 }
 
 /***/ }),
-/* 180 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -60335,7 +60464,7 @@ if (false) {
 }
 
 /***/ }),
-/* 181 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -60355,7 +60484,7 @@ if (false) {
 }
 
 /***/ }),
-/* 182 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -60450,7 +60579,7 @@ if (false) {
 }
 
 /***/ }),
-/* 183 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -60505,7 +60634,7 @@ if (false) {
 }
 
 /***/ }),
-/* 184 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -60544,17 +60673,17 @@ if (false) {
 }
 
 /***/ }),
-/* 185 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(163);
+var content = __webpack_require__(164);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(186)("145c7a2a", content, false);
+var update = __webpack_require__(189)("145c7a2a", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -60570,7 +60699,7 @@ if(false) {
 }
 
 /***/ }),
-/* 186 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -60589,7 +60718,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(187)
+var listToStyles = __webpack_require__(190)
 
 /*
 type StyleObject = {
@@ -60791,7 +60920,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 187 */
+/* 190 */
 /***/ (function(module, exports) {
 
 /**
@@ -60824,147 +60953,12 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 188 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(132);
 module.exports = __webpack_require__(133);
 
-
-/***/ }),
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(2)(
-  /* script */
-  __webpack_require__(198),
-  /* template */
-  __webpack_require__(197),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "C:\\xampp\\htdocs\\forum\\resources\\assets\\js\\components\\UserNotifications.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] UserNotifications.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-26743ee4", Component.options)
-  } else {
-    hotAPI.reload("data-v-26743ee4", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 197 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return (_vm.notifications.length) ? _c('li', {
-    staticClass: "dropdown"
-  }, [_vm._m(0), _vm._v(" "), _c('ul', {
-    staticClass: "dropdown-menu"
-  }, _vm._l((_vm.notifications), function(notification) {
-    return _c('li', [_c('a', {
-      attrs: {
-        "href": notification.data.link
-      },
-      domProps: {
-        "textContent": _vm._s(notification.data.message)
-      },
-      on: {
-        "click": function($event) {
-          _vm.markAsRead(notification)
-        }
-      }
-    })])
-  }))]) : _vm._e()
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('a', {
-    staticClass: "dropdown-toggle",
-    attrs: {
-      "href": "#",
-      "data-toggle": "dropdown"
-    }
-  }, [_c('span', {
-    staticClass: "glyphicon glyphicon-bell"
-  })])
-}]}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-26743ee4", module.exports)
-  }
-}
-
-/***/ }),
-/* 198 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return { notifications: false };
-    },
-    created: function created() {
-        var _this = this;
-
-        axios.get('/forum/profiles/' + window.App.user.name + '/notifications').then(function (response) {
-            return _this.notifications = response.data;
-        });
-    },
-
-    methods: {
-        markAsRead: function markAsRead(notification) {
-            axios.delete('/forum/profiles/' + window.App.user.name + '/notifications/' + notification.id);
-        }
-        //            subscribe() {
-        //                axios[
-        //                    (this.active ? 'delete' : 'post')
-        //                    ](location.pathname + '/subscriptions');
-        //                this.active = ! this.active;
-        //            }
-
-    }
-});
 
 /***/ })
 /******/ ]);

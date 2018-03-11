@@ -141,4 +141,12 @@ class Tread extends Model
         ->each
         ->notify($reply);
     }
+
+    public function hasUpdatesFor($user)
+    {
+        $key = $user->visitedTreadCacheKey($this);
+//        $key = sprintf("users.%s.visits.%s", auth()->id(), $this->id);
+
+        return $this->updated_at > cache($key);
+    }
 }

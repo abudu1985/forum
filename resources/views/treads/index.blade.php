@@ -9,7 +9,16 @@
                     <div class="panel-heading">
                         <div class="level">
                             <h4 class="flex">
-                                <a href="{{ $tread->path() }}">{{ $tread->title }}</a>
+                                <a href="{{ $tread->path() }}">
+                                    @if (auth()->user() && $tread->hasUpdatesFor(auth()->user()))
+                                        <strong>
+                                            {{ $tread->title }}
+                                        </strong>
+                                        @else
+                                        {{ $tread->title }}
+                                    @endif
+
+                                </a>
                             </h4>
                             <a href="{{$tread->path()}}">{{ $tread->replies_count }}{{ str_plural(' reply', $tread->replies_count)}}</a>
                         </div>

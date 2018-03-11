@@ -110,4 +110,21 @@ class ExampleTest extends TestCase
 
         $this->assertTrue($tread->isSubscribedTo);
     }
+
+    public function test_a_tread_can_check_if_the_authenticated_user_has_read_all_replies()
+    {
+        $this->signIn();
+
+        $tread = create('App\Tread');
+
+        tap(auth()->user(), function ($user) use ($tread){
+
+            $this->assertTrue($tread->hasUpdatesFor($user));
+
+            $user->read($tread);
+
+            $this->assertFalse($tread->hasUpdatesFor($user));
+        });
+
+    }
 }
