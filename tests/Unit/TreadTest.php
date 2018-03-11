@@ -2,6 +2,8 @@
 
 namespace Tests\Unit;
 
+use App\Notifications\TreadWasUpdated;
+use Illuminate\Support\Facades\Notification;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
@@ -37,6 +39,21 @@ class ExampleTest extends TestCase
             'user_id' => 1
         ]);
         $this->assertCount(1, $this->tread->replies);
+    }
+
+    function test_tread_notifies_all_registered_subscribes_when_a_reply_is_added()
+    {
+        Notification::fake();
+
+        $this->signIn()
+            ->tread
+            ->subscribe()
+            ->addReply([
+            'body' => 'Foobar',
+            'user_id' => 999
+        ]);
+
+        Notification::assertSentTo(auth()->user(), TreadWasUpdated::class);
     }
 
     public function test_a_tread_belongs_to_a_channel()
