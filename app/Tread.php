@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Events\TreadHasNewReply;
 use App\Notifications\TreadWasUpdated;
 use Illuminate\Database\Eloquent\Model;
 
@@ -70,11 +71,7 @@ class Tread extends Model
 
         // prepare notifications for all user
 
-        $this->subscriptions
-            ->filter(function ($sub) use ($reply) {
-                return $sub->user_id != $reply->user_id;
-            })
-            ->each->notify($reply);
+        $this->notifySubscribers($reply);
 
         return $reply;
     }
@@ -135,5 +132,13 @@ class Tread extends Model
         return $this->subscriptions()
             ->where('user_id', auth()->id())
             ->exists();
+    }
+
+    public function notifySubscribers($reply)
+    {
+     $this->subscriptions
+        ->where('user_id', '!=', $reply->user_id)
+        ->each
+        ->notify($reply);
     }
 }
